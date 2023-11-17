@@ -2,23 +2,18 @@ using System;
 using System.Drawing;
 using System.Windows.Forms;
 
+using Background;
+
 class MForm : Form {
     public MForm() {
-        Text = "Simple menu";
+		
+		this.Width = 500;
+		this.Height = 500;
+		
+        BasicBackground back = new BasicBackground();
 
-        MenuStrip ms = new MenuStrip();
-        ms.Parent = this;
-        
-        ToolStripMenuItem file = new ToolStripMenuItem("&File");          
-        ToolStripMenuItem exit = new ToolStripMenuItem("&Exit", null,
-            new EventHandler(OnExit));          
-        exit.ShortcutKeys = Keys.Control | Keys.X;
-        file.DropDownItems.Add(exit);
-
-        ms.Items.Add(file);
-        MainMenuStrip = ms;
-        Size = new Size(250, 200);
-
+		back.BasicBack(this);
+		
         CenterToScreen();
     }
 
