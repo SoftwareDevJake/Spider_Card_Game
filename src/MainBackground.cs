@@ -21,6 +21,8 @@ namespace Background
 		
 		public Button firstPlace = new Button();
 		public Button secondPlace = new Button();
+		// button array + location of a testBtn when click is done
+		
 		public Image image = Image.FromFile("/workspace/Spider_Card_Game/img/Card_back.png");
 		
 		public void BasicBack(Form form)
